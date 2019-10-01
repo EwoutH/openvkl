@@ -1,5 +1,7 @@
 # Intel® Open Volume Kernel Library
 
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/openvkl/openvkl?branch=master&svg=true)](https://ci.appveyor.com/project/openvkl/openvkl)
+
 This is release v0.7.0 of Intel® Open VKL. For changes and new features
 see the [changelog](CHANGELOG.md). Visit http://www.openvkl.org for more
 information.

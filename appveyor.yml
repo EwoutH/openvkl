@@ -1,0 +1,22 @@
+image: Visual Studio 2019
+configuration: Release
+
+install:
+  - cmake . -G "Visual Studio 16 2019" -A x64
+
+build:
+  project: openvkl.sln
+
+artifacts:
+  - path: bin\**\*openvkl*.exe
+    name: $(APPVEYOR_PROJECT_NAME)
+
+deploy:
+  - provider: GitHub
+    artifact: $(APPVEYOR_PROJECT_NAME)
+    auth_token:
+      secure: "sf0pQXlPI+X6LoAR8QUJB74jjzNxcLGOXI3H0nbxJq8llvGPG/TAUd87hq5iHZXo"
+    prerelease: true
+    on:
+      appveyor_repo_tag: true
+      configuration: Release
